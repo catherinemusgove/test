@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_946328b4efe07ee33845657b4eec6782 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_946328b4efe07ee33845657b4eec6782" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_946328b4efe07ee33845657b4eec6782 = L.map(
+                "map_946328b4efe07ee33845657b4eec6782",
+                {
+                    center: [52.3676, 4.9041],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_946328b4efe07ee33845657b4eec6782);
+
+            
+
+        
+    
+            var tile_layer_0e630f207cdf1dc8cc788a5c9b613879 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var circle_e51dd25cb6065b9e140b483148ec0926 = L.circle(
+                [52.3676, 4.9041],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500000, "stroke": true, "weight": 3}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+        var popup_c9234b98432f58d7f85181dfb7db2ef0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6e1ac280cde741cbbcdc150075ff179 = $(`<div id="html_f6e1ac280cde741cbbcdc150075ff179" style="width: 100.0%; height: 100.0%;">~5h train radius (~500 km)</div>`)[0];
+            popup_c9234b98432f58d7f85181dfb7db2ef0.setContent(html_f6e1ac280cde741cbbcdc150075ff179);
+        
+
+        circle_e51dd25cb6065b9e140b483148ec0926.bindPopup(popup_c9234b98432f58d7f85181dfb7db2ef0)
+        ;
+
+        
+    
+    
+            var circle_db039c50cf3a8540fb5e8466be7d6910 = L.circle(
+                [52.3676, 4.9041],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500000, "stroke": true, "weight": 3}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+        var popup_4323988fea7ef8dc1fb8f78b3fb4880d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ca5d6ef9ac66d58d3ab48eae7add1b0 = $(`<div id="html_4ca5d6ef9ac66d58d3ab48eae7add1b0" style="width: 100.0%; height: 100.0%;">~2h flight radius (~1500 km proxy)</div>`)[0];
+            popup_4323988fea7ef8dc1fb8f78b3fb4880d.setContent(html_4ca5d6ef9ac66d58d3ab48eae7add1b0);
+        
+
+        circle_db039c50cf3a8540fb5e8466be7d6910.bindPopup(popup_4323988fea7ef8dc1fb8f78b3fb4880d)
+        ;
+
+        
+    
+    
+            var marker_98234c1269c360c8fe7d4efe18e76083 = L.marker(
+                [50.8503, 4.3517],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_cb94a22e3e8b3b3e4f53415ec68177c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_98234c1269c360c8fe7d4efe18e76083.setIcon(icon_cb94a22e3e8b3b3e4f53415ec68177c1);
+        
+    
+        var popup_bfcf179740f5e94cfc546a1b24240f69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9bc7f9917963bb24116815b9475ac72f = $(`<div id="html_9bc7f9917963bb24116815b9475ac72f" style="width: 100.0%; height: 100.0%;">Brussels • Train-feasible (~≤5h) Approx distance: 173 km</div>`)[0];
+            popup_bfcf179740f5e94cfc546a1b24240f69.setContent(html_9bc7f9917963bb24116815b9475ac72f);
+        
+
+        marker_98234c1269c360c8fe7d4efe18e76083.bindPopup(popup_bfcf179740f5e94cfc546a1b24240f69)
+        ;
+
+        
+    
+    
+            var marker_e1b78985f653661bb4567fc0234d6ed2 = L.marker(
+                [51.2194, 4.4025],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_36b40c83bf4bdb1409ce8ed96d00d7b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e1b78985f653661bb4567fc0234d6ed2.setIcon(icon_36b40c83bf4bdb1409ce8ed96d00d7b5);
+        
+    
+        var popup_1efa27b303e023098c14d1b97450b708 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de283fc5579763e0ba3536a660e1af40 = $(`<div id="html_de283fc5579763e0ba3536a660e1af40" style="width: 100.0%; height: 100.0%;">Antwerp • Train-feasible (~≤5h) Approx distance: 132 km</div>`)[0];
+            popup_1efa27b303e023098c14d1b97450b708.setContent(html_de283fc5579763e0ba3536a660e1af40);
+        
+
+        marker_e1b78985f653661bb4567fc0234d6ed2.bindPopup(popup_1efa27b303e023098c14d1b97450b708)
+        ;
+
+        
+    
+    
+            var marker_d900c31921960b430fb23965311e9d20 = L.marker(
+                [51.0543, 3.7174],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_df092b242e0cd24eb941bc57fc2fdcfd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d900c31921960b430fb23965311e9d20.setIcon(icon_df092b242e0cd24eb941bc57fc2fdcfd);
+        
+    
+        var popup_a0994aaa8e9a801ebade247573ef34df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_195b1306af0b84f8a7b472ced1f0e236 = $(`<div id="html_195b1306af0b84f8a7b472ced1f0e236" style="width: 100.0%; height: 100.0%;">Ghent • Train-feasible (~≤5h) Approx distance: 168 km</div>`)[0];
+            popup_a0994aaa8e9a801ebade247573ef34df.setContent(html_195b1306af0b84f8a7b472ced1f0e236);
+        
+
+        marker_d900c31921960b430fb23965311e9d20.bindPopup(popup_a0994aaa8e9a801ebade247573ef34df)
+        ;
+
+        
+    
+    
+            var marker_518c2d8eb375ff6a423b768ac9858871 = L.marker(
+                [51.2093, 3.2247],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_0194e6c5f26339b5f86f6e73bdce2a97 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_518c2d8eb375ff6a423b768ac9858871.setIcon(icon_0194e6c5f26339b5f86f6e73bdce2a97);
+        
+    
+        var popup_02fb7441d85b981189b07e1881a1e2df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d9b10decb75675f057bfa90cc7ef61f = $(`<div id="html_4d9b10decb75675f057bfa90cc7ef61f" style="width: 100.0%; height: 100.0%;">Bruges • Train-feasible (~≤5h) Approx distance: 173 km</div>`)[0];
+            popup_02fb7441d85b981189b07e1881a1e2df.setContent(html_4d9b10decb75675f057bfa90cc7ef61f);
+        
+
+        marker_518c2d8eb375ff6a423b768ac9858871.bindPopup(popup_02fb7441d85b981189b07e1881a1e2df)
+        ;
+
+        
+    
+    
+            var marker_47ba393abb0b5e266546d7ac42ac49ff = L.marker(
+                [50.8796, 4.7009],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_3da34e76f235d6dbd18f7bc6746ace1c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_47ba393abb0b5e266546d7ac42ac49ff.setIcon(icon_3da34e76f235d6dbd18f7bc6746ace1c);
+        
+    
+        var popup_c4daa145c922358e5814f950486316f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_91786d9c6967f62bd9b7cbdc5d6c1a60 = $(`<div id="html_91786d9c6967f62bd9b7cbdc5d6c1a60" style="width: 100.0%; height: 100.0%;">Leuven • Train-feasible (~≤5h) Approx distance: 166 km</div>`)[0];
+            popup_c4daa145c922358e5814f950486316f6.setContent(html_91786d9c6967f62bd9b7cbdc5d6c1a60);
+        
+
+        marker_47ba393abb0b5e266546d7ac42ac49ff.bindPopup(popup_c4daa145c922358e5814f950486316f6)
+        ;
+
+        
+    
+    
+            var marker_3759826a5035cf90d2a7693910b2db31 = L.marker(
+                [50.6326, 5.5797],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_ab5d10a0d8a9e1dd9e4c7f0ae6f9fe96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3759826a5035cf90d2a7693910b2db31.setIcon(icon_ab5d10a0d8a9e1dd9e4c7f0ae6f9fe96);
+        
+    
+        var popup_6109c8e4ec7d8e960b38b0f667c7236f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13445308de9feb60f38ee1e619b75083 = $(`<div id="html_13445308de9feb60f38ee1e619b75083" style="width: 100.0%; height: 100.0%;">Liege • Train-feasible (~≤5h) Approx distance: 199 km</div>`)[0];
+            popup_6109c8e4ec7d8e960b38b0f667c7236f.setContent(html_13445308de9feb60f38ee1e619b75083);
+        
+
+        marker_3759826a5035cf90d2a7693910b2db31.bindPopup(popup_6109c8e4ec7d8e960b38b0f667c7236f)
+        ;
+
+        
+    
+    
+            var marker_6457552e0550dc75d1b5920912f73e07 = L.marker(
+                [48.8566, 2.3522],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_812fe314c5907ecccf305f0a47922006 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6457552e0550dc75d1b5920912f73e07.setIcon(icon_812fe314c5907ecccf305f0a47922006);
+        
+    
+        var popup_07f6d08ff4956deff2387a111c6d0db6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d63b870d331788707d525166935063e9 = $(`<div id="html_d63b870d331788707d525166935063e9" style="width: 100.0%; height: 100.0%;">Paris • Train-feasible (~≤5h) Approx distance: 430 km</div>`)[0];
+            popup_07f6d08ff4956deff2387a111c6d0db6.setContent(html_d63b870d331788707d525166935063e9);
+        
+
+        marker_6457552e0550dc75d1b5920912f73e07.bindPopup(popup_07f6d08ff4956deff2387a111c6d0db6)
+        ;
+
+        
+    
+    
+            var marker_e7f1890a884a71cc009204a249fb0468 = L.marker(
+                [50.6292, 3.0573],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_6ffc317011c2ae02e8cf5a85521ca075 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e7f1890a884a71cc009204a249fb0468.setIcon(icon_6ffc317011c2ae02e8cf5a85521ca075);
+        
+    
+        var popup_a067aa24a81d31ba805f598153e6ba15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45a9dbd9eccc6d489ed5c1649e1fecea = $(`<div id="html_45a9dbd9eccc6d489ed5c1649e1fecea" style="width: 100.0%; height: 100.0%;">Lille • Train-feasible (~≤5h) Approx distance: 232 km</div>`)[0];
+            popup_a067aa24a81d31ba805f598153e6ba15.setContent(html_45a9dbd9eccc6d489ed5c1649e1fecea);
+        
+
+        marker_e7f1890a884a71cc009204a249fb0468.bindPopup(popup_a067aa24a81d31ba805f598153e6ba15)
+        ;
+
+        
+    
+    
+            var marker_0e48067a931e0ddf6b7c0653a039caa2 = L.marker(
+                [48.5734, 7.7521],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_f743c3c1c0b5eb0e315dd7c082bfc918 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0e48067a931e0ddf6b7c0653a039caa2.setIcon(icon_f743c3c1c0b5eb0e315dd7c082bfc918);
+        
+    
+        var popup_e33294499a664fdb11baeca158d5244a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ffbda353108baabecf7759af077cbd2f = $(`<div id="html_ffbda353108baabecf7759af077cbd2f" style="width: 100.0%; height: 100.0%;">Strasbourg • Train-feasible (~≤5h) Approx distance: 468 km</div>`)[0];
+            popup_e33294499a664fdb11baeca158d5244a.setContent(html_ffbda353108baabecf7759af077cbd2f);
+        
+
+        marker_0e48067a931e0ddf6b7c0653a039caa2.bindPopup(popup_e33294499a664fdb11baeca158d5244a)
+        ;
+
+        
+    
+    
+            var marker_59a50a52378c3ea30047022b14dbd269 = L.marker(
+                [45.764, 4.8357],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_866159bbcd56d30bbfbf88544513c9e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_59a50a52378c3ea30047022b14dbd269.setIcon(icon_866159bbcd56d30bbfbf88544513c9e4);
+        
+    
+        var popup_6c452250af0adb767cc70154551a42b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb00dbfc40fb7c5f8ee4149eee85e8e9 = $(`<div id="html_cb00dbfc40fb7c5f8ee4149eee85e8e9" style="width: 100.0%; height: 100.0%;">Lyon • Flight-feasible (~≤2h) Approx distance: 734 km</div>`)[0];
+            popup_6c452250af0adb767cc70154551a42b7.setContent(html_cb00dbfc40fb7c5f8ee4149eee85e8e9);
+        
+
+        marker_59a50a52378c3ea30047022b14dbd269.bindPopup(popup_6c452250af0adb767cc70154551a42b7)
+        ;
+
+        
+    
+    
+            var marker_e4cd4777fcc115aa019b7e72e60847c7 = L.marker(
+                [50.9375, 6.9603],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_408e430d5fbeabb489a9caf1387b9461 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e4cd4777fcc115aa019b7e72e60847c7.setIcon(icon_408e430d5fbeabb489a9caf1387b9461);
+        
+    
+        var popup_3df78c460cf741a1ce94f2896793601c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ad04059c30de20ec8a8cbe44a53a378 = $(`<div id="html_9ad04059c30de20ec8a8cbe44a53a378" style="width: 100.0%; height: 100.0%;">Cologne • Train-feasible (~≤5h) Approx distance: 213 km</div>`)[0];
+            popup_3df78c460cf741a1ce94f2896793601c.setContent(html_9ad04059c30de20ec8a8cbe44a53a378);
+        
+
+        marker_e4cd4777fcc115aa019b7e72e60847c7.bindPopup(popup_3df78c460cf741a1ce94f2896793601c)
+        ;
+
+        
+    
+    
+            var marker_23b9b18ee1ad126433222a1e5ffdeea7 = L.marker(
+                [51.2277, 6.7735],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_39b8d016bc470dc37c21d0fb7c5be440 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_23b9b18ee1ad126433222a1e5ffdeea7.setIcon(icon_39b8d016bc470dc37c21d0fb7c5be440);
+        
+    
+        var popup_b7fe7c446100b116d44ade1bf2eb6a15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_606bb1dc2f0dd8d73fce4a90563632bc = $(`<div id="html_606bb1dc2f0dd8d73fce4a90563632bc" style="width: 100.0%; height: 100.0%;">Düsseldorf • Train-feasible (~≤5h) Approx distance: 181 km</div>`)[0];
+            popup_b7fe7c446100b116d44ade1bf2eb6a15.setContent(html_606bb1dc2f0dd8d73fce4a90563632bc);
+        
+
+        marker_23b9b18ee1ad126433222a1e5ffdeea7.bindPopup(popup_b7fe7c446100b116d44ade1bf2eb6a15)
+        ;
+
+        
+    
+    
+            var marker_c79d508b93356878f4eb84e7d0e3cfa1 = L.marker(
+                [50.1109, 8.6821],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_1e508b7cad5c4592a6efb98ee534d8b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c79d508b93356878f4eb84e7d0e3cfa1.setIcon(icon_1e508b7cad5c4592a6efb98ee534d8b3);
+        
+    
+        var popup_3b77ee4936a191fd8a8f532ea670859b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_288966a3d9b5ba52cac06997feb92cbb = $(`<div id="html_288966a3d9b5ba52cac06997feb92cbb" style="width: 100.0%; height: 100.0%;">Frankfurt • Train-feasible (~≤5h) Approx distance: 364 km</div>`)[0];
+            popup_3b77ee4936a191fd8a8f532ea670859b.setContent(html_288966a3d9b5ba52cac06997feb92cbb);
+        
+
+        marker_c79d508b93356878f4eb84e7d0e3cfa1.bindPopup(popup_3b77ee4936a191fd8a8f532ea670859b)
+        ;
+
+        
+    
+    
+            var marker_bae1e074d7573db1c7dc52a9d9e7f022 = L.marker(
+                [53.5511, 9.9937],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_854d448e4d6a46023cb26c7fbb35882c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_bae1e074d7573db1c7dc52a9d9e7f022.setIcon(icon_854d448e4d6a46023cb26c7fbb35882c);
+        
+    
+        var popup_86d753777a66735e569268c5de34235c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff4aef521b5fadda2b9a096417d00d1f = $(`<div id="html_ff4aef521b5fadda2b9a096417d00d1f" style="width: 100.0%; height: 100.0%;">Hamburg • Train-feasible (~≤5h) Approx distance: 366 km</div>`)[0];
+            popup_86d753777a66735e569268c5de34235c.setContent(html_ff4aef521b5fadda2b9a096417d00d1f);
+        
+
+        marker_bae1e074d7573db1c7dc52a9d9e7f022.bindPopup(popup_86d753777a66735e569268c5de34235c)
+        ;
+
+        
+    
+    
+            var marker_65d84d7c008f00e7cd8e2a936a9f3ff6 = L.marker(
+                [52.52, 13.405],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_c492e2c0df02238fe0ae047d516352d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_65d84d7c008f00e7cd8e2a936a9f3ff6.setIcon(icon_c492e2c0df02238fe0ae047d516352d1);
+        
+    
+        var popup_377ec818aada399afd89cfa26ca59262 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed289b9ced50ee0ccf59541bb1393863 = $(`<div id="html_ed289b9ced50ee0ccf59541bb1393863" style="width: 100.0%; height: 100.0%;">Berlin • Flight-feasible (~≤2h) Approx distance: 578 km</div>`)[0];
+            popup_377ec818aada399afd89cfa26ca59262.setContent(html_ed289b9ced50ee0ccf59541bb1393863);
+        
+
+        marker_65d84d7c008f00e7cd8e2a936a9f3ff6.bindPopup(popup_377ec818aada399afd89cfa26ca59262)
+        ;
+
+        
+    
+    
+            var marker_7bd10e9a472a1ab5f241c25e7c371476 = L.marker(
+                [48.1351, 11.582],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_2dafda3a37f2442973e9765134f09924 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7bd10e9a472a1ab5f241c25e7c371476.setIcon(icon_2dafda3a37f2442973e9765134f09924);
+        
+    
+        var popup_f78dbd3f62c1be90db7455f6cd9f007d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_813f356604a55b628d1992ff67c7ab37 = $(`<div id="html_813f356604a55b628d1992ff67c7ab37" style="width: 100.0%; height: 100.0%;">Munich • Flight-feasible (~≤2h) Approx distance: 669 km</div>`)[0];
+            popup_f78dbd3f62c1be90db7455f6cd9f007d.setContent(html_813f356604a55b628d1992ff67c7ab37);
+        
+
+        marker_7bd10e9a472a1ab5f241c25e7c371476.bindPopup(popup_f78dbd3f62c1be90db7455f6cd9f007d)
+        ;
+
+        
+    
+    
+            var marker_77dcc3db1c674055b00e4ee27cace70c = L.marker(
+                [48.7758, 9.1829],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_67db95ea281c845c8de02a8254ace176 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_77dcc3db1c674055b00e4ee27cace70c.setIcon(icon_67db95ea281c845c8de02a8254ace176);
+        
+    
+        var popup_a3e7b28d37c8ddd4f7400655c495fdac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fbc497575e00f8e4eb2cc32cfbea6a1f = $(`<div id="html_fbc497575e00f8e4eb2cc32cfbea6a1f" style="width: 100.0%; height: 100.0%;">Stuttgart • Flight-feasible (~≤2h) Approx distance: 501 km</div>`)[0];
+            popup_a3e7b28d37c8ddd4f7400655c495fdac.setContent(html_fbc497575e00f8e4eb2cc32cfbea6a1f);
+        
+
+        marker_77dcc3db1c674055b00e4ee27cace70c.bindPopup(popup_a3e7b28d37c8ddd4f7400655c495fdac)
+        ;
+
+        
+    
+    
+            var marker_a96c027f45c88a9f77498401b9de6af2 = L.marker(
+                [50.7374, 7.0982],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_c488c12bdce336f79c38dd9c0bcf33da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a96c027f45c88a9f77498401b9de6af2.setIcon(icon_c488c12bdce336f79c38dd9c0bcf33da);
+        
+    
+        var popup_42584c19c7f9215c139189771f121339 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b52da6a7e5ecb3b1c2256b3b822f08b = $(`<div id="html_8b52da6a7e5ecb3b1c2256b3b822f08b" style="width: 100.0%; height: 100.0%;">Bonn • Train-feasible (~≤5h) Approx distance: 237 km</div>`)[0];
+            popup_42584c19c7f9215c139189771f121339.setContent(html_8b52da6a7e5ecb3b1c2256b3b822f08b);
+        
+
+        marker_a96c027f45c88a9f77498401b9de6af2.bindPopup(popup_42584c19c7f9215c139189771f121339)
+        ;
+
+        
+    
+    
+            var marker_977a3514a39e430d6b2143e6be42e0d7 = L.marker(
+                [51.5072, -0.1276],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_527c06b5a6f1af062e00b9b7f93a9510 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_977a3514a39e430d6b2143e6be42e0d7.setIcon(icon_527c06b5a6f1af062e00b9b7f93a9510);
+        
+    
+        var popup_12b38b9f68451fb074b27d65829387b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5eabe8da25e615663857b57783493c27 = $(`<div id="html_5eabe8da25e615663857b57783493c27" style="width: 100.0%; height: 100.0%;">London • Train-feasible (~≤5h) Approx distance: 359 km</div>`)[0];
+            popup_12b38b9f68451fb074b27d65829387b7.setContent(html_5eabe8da25e615663857b57783493c27);
+        
+
+        marker_977a3514a39e430d6b2143e6be42e0d7.bindPopup(popup_12b38b9f68451fb074b27d65829387b7)
+        ;
+
+        
+    
+    
+            var marker_4c2c9a8724dc4a52c2415719f3c651a2 = L.marker(
+                [55.9533, -3.1883],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_57bc6f19cf798efa124d265a97f6a1ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4c2c9a8724dc4a52c2415719f3c651a2.setIcon(icon_57bc6f19cf798efa124d265a97f6a1ae);
+        
+    
+        var popup_054723d6fcef4c7f1fd249cf86d9d509 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4428bdaa750c78384c64639148345ff7 = $(`<div id="html_4428bdaa750c78384c64639148345ff7" style="width: 100.0%; height: 100.0%;">Edinburgh • Flight-feasible (~≤2h) Approx distance: 662 km</div>`)[0];
+            popup_054723d6fcef4c7f1fd249cf86d9d509.setContent(html_4428bdaa750c78384c64639148345ff7);
+        
+
+        marker_4c2c9a8724dc4a52c2415719f3c651a2.bindPopup(popup_054723d6fcef4c7f1fd249cf86d9d509)
+        ;
+
+        
+    
+    
+            var marker_22b54d498ef27e9383585fd8c93c82e4 = L.marker(
+                [53.3498, -6.2603],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_22def7cb7de7919b63a5672eeb168940 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_22b54d498ef27e9383585fd8c93c82e4.setIcon(icon_22def7cb7de7919b63a5672eeb168940);
+        
+    
+        var popup_92d2f13d53ff9a9e2a44fcfb78d2eee1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd84aba9203f7fc385386f487a44641f = $(`<div id="html_bd84aba9203f7fc385386f487a44641f" style="width: 100.0%; height: 100.0%;">Dublin • Flight-feasible (~≤2h) Approx distance: 759 km</div>`)[0];
+            popup_92d2f13d53ff9a9e2a44fcfb78d2eee1.setContent(html_bd84aba9203f7fc385386f487a44641f);
+        
+
+        marker_22b54d498ef27e9383585fd8c93c82e4.bindPopup(popup_92d2f13d53ff9a9e2a44fcfb78d2eee1)
+        ;
+
+        
+    
+    
+            var marker_476581827f938cddc337fa2478a5b261 = L.marker(
+                [53.4808, -2.2426],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_c49869ce8accc996fd8135f655a1faf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_476581827f938cddc337fa2478a5b261.setIcon(icon_c49869ce8accc996fd8135f655a1faf2);
+        
+    
+        var popup_f59cb6fb0d3fac73cff7e25d0b413724 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ccb5e1cba594d5ddaa1acc645eeb184 = $(`<div id="html_4ccb5e1cba594d5ddaa1acc645eeb184" style="width: 100.0%; height: 100.0%;">Manchester • Train-feasible (~≤5h) Approx distance: 496 km</div>`)[0];
+            popup_f59cb6fb0d3fac73cff7e25d0b413724.setContent(html_4ccb5e1cba594d5ddaa1acc645eeb184);
+        
+
+        marker_476581827f938cddc337fa2478a5b261.bindPopup(popup_f59cb6fb0d3fac73cff7e25d0b413724)
+        ;
+
+        
+    
+    
+            var marker_8b6bfb2b2b3819ea396e40a88706f8a6 = L.marker(
+                [55.6761, 12.5683],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_cfd479ceea8769297bef1e969033d39e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8b6bfb2b2b3819ea396e40a88706f8a6.setIcon(icon_cfd479ceea8769297bef1e969033d39e);
+        
+    
+        var popup_395da0b74539961d0cffb5d9b106724e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d251b1c61c27946039ef2e275ff5a2be = $(`<div id="html_d251b1c61c27946039ef2e275ff5a2be" style="width: 100.0%; height: 100.0%;">Copenhagen • Flight-feasible (~≤2h) Approx distance: 622 km</div>`)[0];
+            popup_395da0b74539961d0cffb5d9b106724e.setContent(html_d251b1c61c27946039ef2e275ff5a2be);
+        
+
+        marker_8b6bfb2b2b3819ea396e40a88706f8a6.bindPopup(popup_395da0b74539961d0cffb5d9b106724e)
+        ;
+
+        
+    
+    
+            var marker_6381630ea09d0995d71debf0114fa0b7 = L.marker(
+                [59.9139, 10.7522],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_d68410eff2b76ef1a3598accbfce42ef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6381630ea09d0995d71debf0114fa0b7.setIcon(icon_d68410eff2b76ef1a3598accbfce42ef);
+        
+    
+        var popup_6878d63e126583808cf2fbec22180d89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_312917468fe71a4dac08fe3e3cfcf315 = $(`<div id="html_312917468fe71a4dac08fe3e3cfcf315" style="width: 100.0%; height: 100.0%;">Oslo • Flight-feasible (~≤2h) Approx distance: 915 km</div>`)[0];
+            popup_6878d63e126583808cf2fbec22180d89.setContent(html_312917468fe71a4dac08fe3e3cfcf315);
+        
+
+        marker_6381630ea09d0995d71debf0114fa0b7.bindPopup(popup_6878d63e126583808cf2fbec22180d89)
+        ;
+
+        
+    
+    
+            var marker_d2a9c9de070f5ad39813d578750e58f4 = L.marker(
+                [59.3293, 18.0686],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_0e97e716358999e9a47ed2f45e9c9eda = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d2a9c9de070f5ad39813d578750e58f4.setIcon(icon_0e97e716358999e9a47ed2f45e9c9eda);
+        
+    
+        var popup_823dc507bc06330a89424315c5b99da5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9d90e1d288a9aca32a96d11c190524d = $(`<div id="html_a9d90e1d288a9aca32a96d11c190524d" style="width: 100.0%; height: 100.0%;">Stockholm • Flight-feasible (~≤2h) Approx distance: 1128 km</div>`)[0];
+            popup_823dc507bc06330a89424315c5b99da5.setContent(html_a9d90e1d288a9aca32a96d11c190524d);
+        
+
+        marker_d2a9c9de070f5ad39813d578750e58f4.bindPopup(popup_823dc507bc06330a89424315c5b99da5)
+        ;
+
+        
+    
+    
+            var marker_a1cd34e0c6be591ba190658704cc0407 = L.marker(
+                [47.3769, 8.5417],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_76d23dccf5011c52a3f64b10984ba4c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a1cd34e0c6be591ba190658704cc0407.setIcon(icon_76d23dccf5011c52a3f64b10984ba4c3);
+        
+    
+        var popup_e2425eba45f2ba30906c2b233b8de162 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ab29529f550b8a8f60b1d754fda02d6 = $(`<div id="html_5ab29529f550b8a8f60b1d754fda02d6" style="width: 100.0%; height: 100.0%;">Zurich • Flight-feasible (~≤2h) Approx distance: 613 km</div>`)[0];
+            popup_e2425eba45f2ba30906c2b233b8de162.setContent(html_5ab29529f550b8a8f60b1d754fda02d6);
+        
+
+        marker_a1cd34e0c6be591ba190658704cc0407.bindPopup(popup_e2425eba45f2ba30906c2b233b8de162)
+        ;
+
+        
+    
+    
+            var marker_10eac2fe67e9fdc193bad03f95ed4227 = L.marker(
+                [46.2044, 6.1432],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_f8c65ecdada417bee6ec0ba32792864b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_10eac2fe67e9fdc193bad03f95ed4227.setIcon(icon_f8c65ecdada417bee6ec0ba32792864b);
+        
+    
+        var popup_fc4d6f4e7b405bb0654ae71313841add = L.popup({"maxWidth": "100%"});
+
+        
+            var html_662755c82ee22a711068f54e35bb5d0b = $(`<div id="html_662755c82ee22a711068f54e35bb5d0b" style="width: 100.0%; height: 100.0%;">Geneva • Flight-feasible (~≤2h) Approx distance: 691 km</div>`)[0];
+            popup_fc4d6f4e7b405bb0654ae71313841add.setContent(html_662755c82ee22a711068f54e35bb5d0b);
+        
+
+        marker_10eac2fe67e9fdc193bad03f95ed4227.bindPopup(popup_fc4d6f4e7b405bb0654ae71313841add)
+        ;
+
+        
+    
+    
+            var marker_ba811316b3c8c4ca8fefb3840b11a762 = L.marker(
+                [47.5596, 7.5886],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_1329ac8de0803fcc1082f6d81fecd8ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ba811316b3c8c4ca8fefb3840b11a762.setIcon(icon_1329ac8de0803fcc1082f6d81fecd8ce);
+        
+    
+        var popup_6192fc860b9f8b111f556365772d042f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc1bc3dd6fedd875e9f7941eb9032eca = $(`<div id="html_fc1bc3dd6fedd875e9f7941eb9032eca" style="width: 100.0%; height: 100.0%;">Basel • Flight-feasible (~≤2h) Approx distance: 568 km</div>`)[0];
+            popup_6192fc860b9f8b111f556365772d042f.setContent(html_fc1bc3dd6fedd875e9f7941eb9032eca);
+        
+
+        marker_ba811316b3c8c4ca8fefb3840b11a762.bindPopup(popup_6192fc860b9f8b111f556365772d042f)
+        ;
+
+        
+    
+    
+            var marker_6481041d3fd2cf3dd38c2fae0d9be4e8 = L.marker(
+                [48.2082, 16.3738],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_3a6a14f155a6f24e80d0745c49132cf7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6481041d3fd2cf3dd38c2fae0d9be4e8.setIcon(icon_3a6a14f155a6f24e80d0745c49132cf7);
+        
+    
+        var popup_caf322b6146d8be1c54427839ba56438 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00d857f8f7d77b3df1f38e0a4dfaa050 = $(`<div id="html_00d857f8f7d77b3df1f38e0a4dfaa050" style="width: 100.0%; height: 100.0%;">Vienna • Flight-feasible (~≤2h) Approx distance: 938 km</div>`)[0];
+            popup_caf322b6146d8be1c54427839ba56438.setContent(html_00d857f8f7d77b3df1f38e0a4dfaa050);
+        
+
+        marker_6481041d3fd2cf3dd38c2fae0d9be4e8.bindPopup(popup_caf322b6146d8be1c54427839ba56438)
+        ;
+
+        
+    
+    
+            var marker_891a0d22683a86aeb856da6afbf38da2 = L.marker(
+                [50.0755, 14.4378],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_93d497ac655df5a6a251fb659e88f301 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_891a0d22683a86aeb856da6afbf38da2.setIcon(icon_93d497ac655df5a6a251fb659e88f301);
+        
+    
+        var popup_9708beff8dc3323412c91a99927809d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c289501a6b33b2590eb59310d72e74ee = $(`<div id="html_c289501a6b33b2590eb59310d72e74ee" style="width: 100.0%; height: 100.0%;">Prague • Flight-feasible (~≤2h) Approx distance: 713 km</div>`)[0];
+            popup_9708beff8dc3323412c91a99927809d0.setContent(html_c289501a6b33b2590eb59310d72e74ee);
+        
+
+        marker_891a0d22683a86aeb856da6afbf38da2.bindPopup(popup_9708beff8dc3323412c91a99927809d0)
+        ;
+
+        
+    
+    
+            var marker_6d899486ecca7ae26213790c648b6b1a = L.marker(
+                [45.4642, 9.19],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_4bc44ffecbe49122ec13b447b60d2078 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6d899486ecca7ae26213790c648b6b1a.setIcon(icon_4bc44ffecbe49122ec13b447b60d2078);
+        
+    
+        var popup_64bff14b4a2cda7248fe664f96b10dd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d39180911f2cb5ed15cd4f45619a74f = $(`<div id="html_4d39180911f2cb5ed15cd4f45619a74f" style="width: 100.0%; height: 100.0%;">Milan • Flight-feasible (~≤2h) Approx distance: 829 km</div>`)[0];
+            popup_64bff14b4a2cda7248fe664f96b10dd8.setContent(html_4d39180911f2cb5ed15cd4f45619a74f);
+        
+
+        marker_6d899486ecca7ae26213790c648b6b1a.bindPopup(popup_64bff14b4a2cda7248fe664f96b10dd8)
+        ;
+
+        
+    
+    
+            var marker_51e99027553f51d8637aed8473b19a21 = L.marker(
+                [41.9028, 12.4964],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_7c83243fcb3576b4aef0ff4dbb3ff786 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_51e99027553f51d8637aed8473b19a21.setIcon(icon_7c83243fcb3576b4aef0ff4dbb3ff786);
+        
+    
+        var popup_c0a1acfe24dfdcd29ecb9ebb3858613d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06428e1da08ee3438f713042e8c2af17 = $(`<div id="html_06428e1da08ee3438f713042e8c2af17" style="width: 100.0%; height: 100.0%;">Rome • Flight-feasible (~≤2h) Approx distance: 1296 km</div>`)[0];
+            popup_c0a1acfe24dfdcd29ecb9ebb3858613d.setContent(html_06428e1da08ee3438f713042e8c2af17);
+        
+
+        marker_51e99027553f51d8637aed8473b19a21.bindPopup(popup_c0a1acfe24dfdcd29ecb9ebb3858613d)
+        ;
+
+        
+    
+    
+            var marker_3e5123e7509662f26153dfbbe0ef504a = L.marker(
+                [41.3851, 2.1734],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_ff79fd11df1e79e31800313ae7b01fc1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3e5123e7509662f26153dfbbe0ef504a.setIcon(icon_ff79fd11df1e79e31800313ae7b01fc1);
+        
+    
+        var popup_7727df2517ab6fa83fc7c2d4fd895ce8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0f29062681ed7076af7cbdcecde5246 = $(`<div id="html_f0f29062681ed7076af7cbdcecde5246" style="width: 100.0%; height: 100.0%;">Barcelona • Flight-feasible (~≤2h) Approx distance: 1238 km</div>`)[0];
+            popup_7727df2517ab6fa83fc7c2d4fd895ce8.setContent(html_f0f29062681ed7076af7cbdcecde5246);
+        
+
+        marker_3e5123e7509662f26153dfbbe0ef504a.bindPopup(popup_7727df2517ab6fa83fc7c2d4fd895ce8)
+        ;
+
+        
+    
+    
+            var marker_c9e2922912769da91c39f9c873fbdef4 = L.marker(
+                [40.4168, -3.7038],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_e194164222d69744cd1c770a9506c035 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c9e2922912769da91c39f9c873fbdef4.setIcon(icon_e194164222d69744cd1c770a9506c035);
+        
+    
+        var popup_13a4df3a9ceb321b7457527bc3c9882c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_609140d32f7ac9ceff3e3eac8dbe38aa = $(`<div id="html_609140d32f7ac9ceff3e3eac8dbe38aa" style="width: 100.0%; height: 100.0%;">Madrid • Flight-feasible (~≤2h) Approx distance: 1482 km</div>`)[0];
+            popup_13a4df3a9ceb321b7457527bc3c9882c.setContent(html_609140d32f7ac9ceff3e3eac8dbe38aa);
+        
+
+        marker_c9e2922912769da91c39f9c873fbdef4.bindPopup(popup_13a4df3a9ceb321b7457527bc3c9882c)
+        ;
+
+        
+    
+    
+            var marker_c28b9248bd5f997f5987d4bff316bea2 = L.marker(
+                [51.9244, 4.4777],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_5efd69de646aaf5c53354c8f10cd735c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c28b9248bd5f997f5987d4bff316bea2.setIcon(icon_5efd69de646aaf5c53354c8f10cd735c);
+        
+    
+        var popup_57b3042c0a58fbf0df3ce6ca9dc05ff6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d58399caf087213bfe9eb6dc5d5a94b = $(`<div id="html_7d58399caf087213bfe9eb6dc5d5a94b" style="width: 100.0%; height: 100.0%;">Rotterdam • Train-feasible (~≤5h) Approx distance: 57 km</div>`)[0];
+            popup_57b3042c0a58fbf0df3ce6ca9dc05ff6.setContent(html_7d58399caf087213bfe9eb6dc5d5a94b);
+        
+
+        marker_c28b9248bd5f997f5987d4bff316bea2.bindPopup(popup_57b3042c0a58fbf0df3ce6ca9dc05ff6)
+        ;
+
+        
+    
+    
+            var marker_0c555f41064a544cd320c78051cce632 = L.marker(
+                [52.0705, 4.3007],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_3af53798d820e78056b3ea183ec99b07 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0c555f41064a544cd320c78051cce632.setIcon(icon_3af53798d820e78056b3ea183ec99b07);
+        
+    
+        var popup_5567853a01022b42d4d10c744d9bcf6f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7fb63a4f7532263144401239195cd654 = $(`<div id="html_7fb63a4f7532263144401239195cd654" style="width: 100.0%; height: 100.0%;">The Hague • Train-feasible (~≤5h) Approx distance: 53 km</div>`)[0];
+            popup_5567853a01022b42d4d10c744d9bcf6f.setContent(html_7fb63a4f7532263144401239195cd654);
+        
+
+        marker_0c555f41064a544cd320c78051cce632.bindPopup(popup_5567853a01022b42d4d10c744d9bcf6f)
+        ;
+
+        
+    
+    
+            var marker_61733ad4375922f8ce67c88d06b9f581 = L.marker(
+                [52.0907, 5.1214],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_e33a6e3a03b50242b33cb0bf5a0d47e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_61733ad4375922f8ce67c88d06b9f581.setIcon(icon_e33a6e3a03b50242b33cb0bf5a0d47e9);
+        
+    
+        var popup_77f27d7e6810b3c4695be4c156dea180 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df9c40b0b26f78af5655b66ea6f50f80 = $(`<div id="html_df9c40b0b26f78af5655b66ea6f50f80" style="width: 100.0%; height: 100.0%;">Utrecht • Train-feasible (~≤5h) Approx distance: 34 km</div>`)[0];
+            popup_77f27d7e6810b3c4695be4c156dea180.setContent(html_df9c40b0b26f78af5655b66ea6f50f80);
+        
+
+        marker_61733ad4375922f8ce67c88d06b9f581.bindPopup(popup_77f27d7e6810b3c4695be4c156dea180)
+        ;
+
+        
+    
+    
+            var marker_182958e4e3a47834097d73dec5771fac = L.marker(
+                [51.4416, 5.4697],
+                {}
+            ).addTo(map_946328b4efe07ee33845657b4eec6782);
+        
+    
+            var icon_f02ed2f752038f9fc7957c5b6a172d73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_182958e4e3a47834097d73dec5771fac.setIcon(icon_f02ed2f752038f9fc7957c5b6a172d73);
+        
+    
+        var popup_112b395b54f55eb7d54fc1b0917ed8d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf2b20e73ab2407b12b51f5abc45356c = $(`<div id="html_bf2b20e73ab2407b12b51f5abc45356c" style="width: 100.0%; height: 100.0%;">Eindhoven • Train-feasible (~≤5h) Approx distance: 110 km</div>`)[0];
+            popup_112b395b54f55eb7d54fc1b0917ed8d5.setContent(html_bf2b20e73ab2407b12b51f5abc45356c);
+        
+
+        marker_182958e4e3a47834097d73dec5771fac.bindPopup(popup_112b395b54f55eb7d54fc1b0917ed8d5)
+        ;
+
+        
+    
+</script>
+</html>
